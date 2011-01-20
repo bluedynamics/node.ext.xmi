@@ -5,7 +5,7 @@ XMI IO
 Import and instanciate XMINode.
 
   >>> import os
-  >>> from agx.io.xmi import XMINode
+  >>> from node.ext.xmi import XMINode
   >>> paths = [
   ...     os.path.sep.join([datadir, 'examplegg.uml']),
   ...     os.path.sep.join([datadir, 'pyegg.profile.uml']),

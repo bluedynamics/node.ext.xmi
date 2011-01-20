@@ -20,9 +20,9 @@ TESTFILES = [
 datadir = os.path.join(os.path.dirname(__file__), 'data') 
 
 def test_suite():
-    import agx.io.xmi
+    import node.ext.xmi
     XMLConfig('meta.zcml', zope.component)()
-    XMLConfig('configure.zcml', agx.io.xmi)()
+    XMLConfig('configure.zcml', node.ext.xmi)()
     return unittest.TestSuite([
         doctest.DocFileSuite(
             file, 

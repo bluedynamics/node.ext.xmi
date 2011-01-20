@@ -8,7 +8,7 @@ version = '1.0'
 shortdesc ="AGX XMI Input/Output"
 longdesc = open(os.path.join(os.path.dirname(__file__), 'README.txt')).read()
 
-setup(name='agx.io.xmi',
+setup(name='node.ext.xmi',
       version=version,
       description=shortdesc,
       long_description=longdesc,
@@ -25,17 +25,17 @@ setup(name='agx.io.xmi',
       license='GNU General Public Licence',
       packages=find_packages('src'),
       package_dir = {'': 'src'},
-      namespace_packages=['agx', 'agx.io'],
+      namespace_packages=['node', 'node.ext'],
       include_package_data=True,
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'agx.io.xml',
+          'node.ext.xml',
       ],
       extras_require = dict(
           test=[
-            'interlude',
-            'zope.configuration',
+              'interlude',
+              'zope.configuration',
           ]
       ),
       entry_points="""

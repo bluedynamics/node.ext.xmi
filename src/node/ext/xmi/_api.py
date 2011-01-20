@@ -10,8 +10,8 @@ from zope.component import getUtility
 from zodict.node import Node
 from zodict.interfaces import ICallableNode
 from zodict.interfaces import IRoot
-from agx.io.xml.interfaces import IXMLFactory
-from agx.io.xml.interfaces import IXMLNode
+from node.ext.xml.interfaces import IXMLFactory
+from node.ext.xml.interfaces import IXMLNode
 from interfaces import IXMINode
     
 class XMINode(Node):
@@ -23,7 +23,7 @@ class XMINode(Node):
         factory = getUtility(IXMLFactory)
         for path in paths:
             buf = self._extract_from_archive(path)
-            # XXX: fix this id stuff in agx.io.xml
+            # XXX: fix this id stuff in node.ext.xml
             if buf:
                 xml = factory(path,
                               '{http://schema.omg.org/spec/XMI/2.1}id',

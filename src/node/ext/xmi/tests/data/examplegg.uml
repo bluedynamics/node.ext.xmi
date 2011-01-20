@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:pyegg="http:///schemas/pyegg/_DAtNIMQYEd62q_MLW0kltQ/0" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/pyegg/_DAtNIMQYEd62q_MLW0kltQ/0 pyegg.profile.uml#_DAt0MMQYEd62q_MLW0kltQ">
+  <uml:Package xmi:id="_Ie0boMQYEd62q_MLW0kltQ" name="examplegg">
+    <elementImport xmi:id="_IgUQcMQYEd62q_MLW0kltQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_IgU3gMQYEd62q_MLW0kltQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <elementImport xmi:id="_IgU3gcQYEd62q_MLW0kltQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+    </elementImport>
+    <elementImport xmi:id="_IgU3gsQYEd62q_MLW0kltQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_LS6T4MQYEd62q_MLW0kltQ" name="example.agx.egg">
+      <packagedElement xmi:type="uml:Package" xmi:id="_i89uYMQYEd62q_MLW0kltQ" name="mypackage">
+        <packagedElement xmi:type="uml:Class" xmi:id="_pk7g4MQYEd62q_MLW0kltQ" name="MyClass">
+          <ownedAttribute xmi:id="_tl9tYMQYEd62q_MLW0kltQ" name="myattribute1" aggregation="composite">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_1cSJYMQYEd62q_MLW0kltQ" name="operation"/>
+          <ownedOperation xmi:id="_VJzm4MQgEd62q_MLW0kltQ" name="operation1"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_ULuHoMQYEd62q_MLW0kltQ">
+      <eAnnotations xmi:id="_ULvVwMQYEd62q_MLW0kltQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pyegg.profile.uml#_DAt0MMQYEd62q_MLW0kltQ"/>
+      </eAnnotations>
+      <appliedProfile href="pyegg.profile.uml#_zGgaQMQXEd62q_MLW0kltQ"/>
+    </profileApplication>
+  </uml:Package>
+  <pyegg:pyegg xmi:id="_DqB9UMQgEd62q_MLW0kltQ" base_Package="_LS6T4MQYEd62q_MLW0kltQ"/>
+</xmi:XMI>

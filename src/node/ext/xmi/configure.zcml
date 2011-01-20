@@ -1,0 +1,6 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:agx="http://namespaces.zope.org/agx">
+  
+  <include package="agx.io.xml" />
+  
+</configure>

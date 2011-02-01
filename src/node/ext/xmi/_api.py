@@ -1,24 +1,36 @@
-# Copyright BlueDynamics Alliance - http://bluedynamics.com
-# GNU General Public License Version 2
-
 import os
 from zipfile import ZipFile
-from zope.interface import implements
-from zope.interface import alsoProvides
-from zope.interface import noLongerProvides
+from zope.interface import (
+    implements,
+    alsoProvides,
+    noLongerProvides,
+)
 from zope.component import getUtility
-from zodict.node import Node
-from zodict.interfaces import ICallableNode
-from zodict.interfaces import IRoot
-from node.ext.xml.interfaces import IXMLFactory
-from node.ext.xml.interfaces import IXMLNode
-from interfaces import IXMINode
+from plumber import plumber
+from node.parts import (
+    Reference,
+    Order,
+)
+from node.base import OrderedNode
+from node.interfaces import (
+    ICallableNode,
+    IRoot,
+)
+from node.ext.xml.interfaces import (
+    IXMLFactory,
+    IXMLNode,
+)
+from node.ext.xmi.interfaces import IXMINode
+
+
+class XMINode(OrderedNode):
+    __metaclass__ = plumber
+    __plumbing__ = Reference, Order
     
-class XMINode(Node):
     implements(IXMINode, ICallableNode, IRoot)
     
     def __init__(self, name, paths):
-        Node.__init__(self, name)
+        OrderedNode.__init__(self, name)
         self.xmi = None
         factory = getUtility(IXMLFactory)
         for path in paths:
@@ -36,7 +48,7 @@ class XMINode(Node):
         if not IXMLNode.providedBy(val) or not IRoot.providedBy(val):
             raise ValueError(u"Could only contain complete XML trees.")
         noLongerProvides(val, IRoot)
-        Node.__setitem__(self, key, val)
+        OrderedNode.__setitem__(self, key, val)
     
     def reference(self, id):
         for tree in self.values():

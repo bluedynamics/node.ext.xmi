@@ -1,11 +1,9 @@
-# Copyright BlueDynamics Alliance - http://bluedynamics.com
-# GNU General Public License Version 2
-
 from zope.interface import (
     Interface,
     Attribute,
 )
 from node.interfaces import INode
+
 
 class IXMINode(INode):
     """An XMI Node.

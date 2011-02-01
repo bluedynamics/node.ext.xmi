@@ -1,6 +1,3 @@
-# Copyright BlueDynamics Alliance - http://bluedynamics.com
-# GNU General Public License Version 2
-
 import os
 import unittest
 import doctest
@@ -19,6 +16,7 @@ TESTFILES = [
 
 datadir = os.path.join(os.path.dirname(__file__), 'data') 
 
+
 def test_suite():
     import node.ext.xmi
     XMLConfig('meta.zcml', zope.component)()
@@ -32,6 +30,7 @@ def test_suite():
                    'datadir': datadir,},
         ) for file in TESTFILES
     ])
+
 
 if __name__ == '__main__':
     unittest.main(defaultTest='test_suite')

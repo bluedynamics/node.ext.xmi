@@ -13,7 +13,7 @@ from node.parts import (
 )
 from node.base import OrderedNode
 from node.interfaces import (
-    ICallableNode,
+    ICallable,
     IRoot,
 )
 from node.ext.xml.interfaces import (
@@ -27,7 +27,7 @@ class XMINode(OrderedNode):
     __metaclass__ = plumber
     __plumbing__ = Reference, Order
     
-    implements(IXMINode, ICallableNode, IRoot)
+    implements(IXMINode, ICallable, IRoot)
     
     def __init__(self, name, paths):
         OrderedNode.__init__(self, name)

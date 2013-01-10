@@ -6,15 +6,18 @@ from pprint import pprint
 from interlude import interact
 from zope.configuration.xmlconfig import XMLConfig
 
+
 optionflags = doctest.NORMALIZE_WHITESPACE | \
               doctest.ELLIPSIS | \
               doctest.REPORT_ONLY_FIRST_FAILURE
 
+
 TESTFILES = [
-    '../_api.txt',
+    '_api.rst',
 ]
 
-datadir = os.path.join(os.path.dirname(__file__), 'data') 
+
+datadir = os.path.join(os.path.dirname(__file__), 'testing', 'data') 
 
 
 def test_suite():

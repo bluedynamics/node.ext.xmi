@@ -1,6 +1,6 @@
 <configure xmlns="http://namespaces.zope.org/zope"
            xmlns:agx="http://namespaces.zope.org/agx">
-  
+
   <include package="node.ext.xml" />
-  
+
 </configure>

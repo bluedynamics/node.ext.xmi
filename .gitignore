@@ -1,3 +1,4 @@
 *.pyc
 *.pyo
 src/node.ext.xmi.egg-info
+dist/

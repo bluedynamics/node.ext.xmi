@@ -37,10 +37,10 @@ class XMINode(OrderedNode):
             # XXX: fix this id stuff in node.ext.xml
             if buf:
                 xml = factory(path,
-                              '{http://schema.omg.org/spec/XMI/2.1}id',
-                              buf)
+                              'id',
+                              buf, nsprefix='xmi')
             else:
-                xml = factory(path, '{http://schema.omg.org/spec/XMI/2.1}id')
+                xml = factory(path, 'id', nsprefix='xmi')
             self[path] = xml
 
     def __setitem__(self, key, val):
